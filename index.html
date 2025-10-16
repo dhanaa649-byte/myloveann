@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Happy Birthday — Interactive Surprise</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stage">
+    <div class="card">
+      <section id="scene-open" class="scene active">
+        <h1 id="mainTitle">happy birthday my girlfriend!!</h1>
+        <p id="subtitle">there’s more waiting… click to find out ✨</p>
+        <button id="openBtn" class="btn">open it ‹</button>
+      </section>
+
+      <section id="scene-messages" class="scene hidden">
+        <div id="slidesContainer"></div>
+        <div class="controls"><button id="to-games" class="btn">Lanjut ke kejutan</button></div>
+      </section>
+
+      <section id="scene-games" class="scene hidden">
+        <h2>Surprise games & fun</h2>
+        <div class="games-grid">
+          <div class="game-card" id="game-puzzle"><h3>Puzzle Foto</h3><canvas id="puzzleCanvas" width="600" height="600"></canvas><button class="small-btn" id="shufflePuzzle">Acak</button></div>
+          <div class="game-card" id="game-memory"><h3>Memory Match</h3><div id="memoryBoard" class="memory-board"></div><button class="small-btn" id="resetMemory">Reset</button></div>
+          <div class="game-card" id="game-quiz"><h3>Quiz Lucu</h3><div id="quizArea"></div></div>
+          <div class="game-card" id="game-hearts"><h3>Click & Reveal Hearts</h3><div id="heartField" class="heart-field"></div></div>
+          <div class="game-card" id="game-confetti"><h3>Confetti Surprise</h3><button class="small-btn" id="boomConfetti">Celebrate!</button></div>
+        </div>
+        <div class="controls"><button id="to-letter" class="btn">Buka Surat</button></div>
+      </section>
+
+      <section id="scene-letter" class="scene hidden">
+        <h2>Surat untukmu</h2>
+        <p id="letterText">Dear kamu, hari ini adalah hari istimewa — terima kasih sudah jadi kamu. Aku berharap yang terbaik untukmu selalu. — With love</p>
+        <div class="controls"><button id="finalReplay" class="btn">Ulangi dari awal</button></div>
+      </section>
+    </div>
+
+    <audio id="bgm" src="assets/music/bgm.wav" loop></audio>
+    <div class="audio-controls">
+      <button id="playBtn" class="btn">Play music</button>
+      <button id="pauseBtn" class="btn">Pause</button>
+    </div>
+
+    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
